@@ -1,33 +1,48 @@
 .header {
-  margin-top: 50px;
+  margin: 50px 0;
   &-main {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 0 56px;
-    @include maxw(1023px) {
-    }
-    @include maxw(768px) {
-      justify-content: space-between;
-    }
   }
+
   &-logo {
     display: inline-block;
     font-size: 30px;
     font-weight: bold;
     color: $orange;
     line-height: lineH(44px, 30px);
+
     &-lab {
       color: $blue-dark;
     }
   }
+
+  @include maxw(1023px) {
+    &-main {
+      gap: 0 10px;
+    }
+  }
+
+  @include maxw(767px) {
+    &-button {
+      @include maxw(767px) {
+        display: none;
+      }
+    }
+  }
 }
+
 .navigation {
   flex: 1;
   display: flex;
   justify-content: flex-end;
+
   ul {
     display: flex;
     gap: 0 36px;
+
     li {
       list-style: none;
       a {
@@ -36,9 +51,16 @@
       }
     }
   }
+
   @include maxw(1023px) {
+    ul {
+      gap: 0 10px;
+    }
   }
-  @include maxw(768px) {
-    display: none;
+
+  @include maxw(767px) {
+    ul {
+      display: none;
+    }
   }
 }

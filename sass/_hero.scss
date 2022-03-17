@@ -1,54 +1,35 @@
 .hero {
   background: url(../images/img3.png) no-repeat center center / cover,
     url(../images/img2.png) no-repeat center bottom;
-  min-height: 400px;
   margin-bottom: 120px;
-  position: relative;
-
-  @include maxw(1024px) {
-    margin-bottom: 50px;
-  }
 
   &-main {
-    padding: 70px;
-    @include maxw(767px) {
-      padding: 0;
-    }
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 
   &-image {
     object-fit: cover;
     margin-left: auto;
     max-width: 100%;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    background-color: transparent;
-    @include maxw(767px) {
-      max-width: 50%;
-    }
   }
 
   &-content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     color: $blue-dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &-ranked {
+      width: fit-content;
       height: 36px;
       padding: 0 48px;
       margin-bottom: 13px;
       background-color: #e2eaed;
       font-size: 18px;
-      display: inline-block;
       border-radius: 50px;
       position: relative;
-      @include maxw(767px) {
-        height: 24px;
-        padding: 0 32px;
-        margin-bottom: 13px;
-        background-color: #e2eaed;
-        font-size: 12px;
-      }
 
       &-icon {
         position: absolute;
@@ -57,36 +38,71 @@
         background-color: #feaa25;
         border-radius: 50px;
         color: white;
-        @include maxw(767px) {
-          padding: 6px 9px;
-        }
       }
 
       p {
+        max-width: 362px;
         padding: 5px 0;
         line-height: lineH(28px, 18px);
       }
     }
 
     &-heading {
-      font-size: 32px;
+      font-size: 60px;
       line-height: lineH(75px, 60px);
-      width: 55%;
       margin-bottom: 32px;
-      @include maxw(767px) {
-        width: 100%;
-      }
     }
 
     &-desc {
-      width: 50%;
+      width: 75%;
       font-size: 18px;
       line-height: lineH(28px, 18px);
       margin-bottom: 45px;
-      @include maxw(767px) {
+    }
+  }
+
+  @include maxw(1023px) {
+    margin-bottom: 50px;
+
+    &-content {
+      &-heading {
+        font-size: 32px;
+        max-width: 70%;
+      }
+
+      &-desc {
         font-size: 14px;
         line-height: 1;
         width: 90%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @include maxw(767px) {
+    margin-bottom: 60px;
+
+    &-image {
+      max-width: 50%;
+      margin: 0 auto;
+    }
+
+    &-main {
+      padding: 0;
+      grid-template-columns: 1fr;
+      gap: 30px 0;
+    }
+
+    &-content {
+      &-ranked {
+        height: 24px;
+        padding: 0 32px;
+        margin-bottom: 13px;
+        background-color: #e2eaed;
+        font-size: 12px;
+        &-icon {
+          padding: 6px 9px;
+        }
       }
     }
   }

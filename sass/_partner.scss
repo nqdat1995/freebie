@@ -1,7 +1,9 @@
 .partner {
     margin-bottom: 180px;
     @include maxw(1023px) {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
+    }
+    @include maxw(767px) {
     }
     &-heading {
         text-align: center;
