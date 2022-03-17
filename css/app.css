@@ -1,0 +1,169 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: #616368;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  height: 57px;
+  padding: 0 40px;
+  border-radius: 50px;
+}
+.btn-primary {
+  background-color: #2563ff;
+}
+.btn-transparent {
+  background-color: transparent;
+  color: #2563ff;
+}
+
+.header {
+  margin-top: 50px;
+}
+.header-main {
+  display: flex;
+  align-items: center;
+  gap: 0 56px;
+}
+.header-logo {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fcae61;
+  line-height: 1.4666666667;
+}
+.header-logo-lab {
+  color: #242f51;
+}
+
+.navigation {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.navigation ul {
+  display: flex;
+  gap: 0 36px;
+}
+.navigation ul li {
+  list-style: none;
+}
+.navigation ul li a {
+  color: #242f51;
+}
+
+.hero {
+  background: url(../images/img3.png) no-repeat center center/cover, url(../images/img2.png) no-repeat center bottom;
+  margin-bottom: 120px;
+  position: relative;
+}
+.hero-main {
+  padding: 70px;
+}
+.hero-image {
+  object-fit: cover;
+  margin-left: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.hero-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #242f51;
+}
+.hero-content-ranked {
+  height: 36px;
+  padding: 0 48px;
+  margin-bottom: 13px;
+  background-color: #e2eaed;
+  font-size: 18px;
+  display: inline-block;
+  border-radius: 50px;
+  position: relative;
+}
+.hero-content-ranked-icon {
+  position: absolute;
+  padding: 9px 15px;
+  left: 0;
+  background-color: #feaa25;
+  border-radius: 50px;
+  color: white;
+}
+.hero-content-ranked p {
+  padding: 5px 0;
+  line-height: 1.5555555556;
+}
+.hero-content-heading {
+  font-size: 60px;
+  line-height: 1.25;
+  width: 55%;
+  margin-bottom: 32px;
+}
+.hero-content-desc {
+  width: 50%;
+  font-size: 18px;
+  line-height: 1.5555555556;
+  margin-bottom: 45px;
+}
+
+/*# sourceMappingURL=app.css.map */

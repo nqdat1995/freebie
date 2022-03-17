@@ -1,0 +1,33 @@
+.header {
+  margin-top: 50px;
+  &-main {
+    display: flex;
+    align-items: center;
+    gap: 0 56px;
+  }
+  &-logo {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    color: $orange;
+    line-height: lineH(44px, 30px);
+    &-lab {
+      color: $blue-dark;
+    }
+  }
+}
+.navigation {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  ul {
+    display: flex;
+    gap: 0 36px;
+    li {
+      list-style: none;
+      a {
+        color: $blue-dark;
+      }
+    }
+  }
+}
