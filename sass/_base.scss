@@ -31,7 +31,31 @@ body {
     background-color: $blue-light;
   }
   &-transparent {
-    background-color:transparent;
+    background-color: transparent;
     color: $blue-light;
+  }
+  @include maxw(1023px) {
+    padding: 0 10px;
+  }
+  @include maxw(767px) {
+    display: none;
+  }
+}
+
+.text {
+  font-size: 16px;
+  line-height: lineH(26px, 16px);
+}
+
+.title {
+  color: $blue-dark;
+  font-weight: 600;
+  &-main {
+    font-size: 36px;
+    line-height: lineH(46px, 36px);
+  }
+  &-sub {
+    font-size: 20px;
+    line-height: lineH(58px, 20px);
   }
 }

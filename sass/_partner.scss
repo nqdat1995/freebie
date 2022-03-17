@@ -1,0 +1,24 @@
+.partner {
+    margin-bottom: 170px;
+    @include maxw(1023px) {
+        margin-bottom: 100px;
+    }
+    &-heading {
+        text-align: center;
+        color: $blue-dark;
+        margin-bottom: 40px;
+    }
+    &-items {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px 0;
+        @include maxw(767px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}

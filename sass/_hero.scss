@@ -1,21 +1,38 @@
 .hero {
   background: url(../images/img3.png) no-repeat center center / cover,
     url(../images/img2.png) no-repeat center bottom;
+  min-height: 400px;
   margin-bottom: 120px;
   position: relative;
+
+  @include maxw(1024px) {
+    margin-bottom: 50px;
+  }
+
   &-main {
     padding: 70px;
+    @include maxw(767px) {
+      padding: 0;
+    }
   }
+
   &-image {
     object-fit: cover;
     margin-left: auto;
+    max-width: 100%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: transparent;
+    @include maxw(767px) {
+      max-width: 50%;
+    }
   }
+
   &-content {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     color: $blue-dark;
+
     &-ranked {
       height: 36px;
       padding: 0 48px;
@@ -25,6 +42,14 @@
       display: inline-block;
       border-radius: 50px;
       position: relative;
+      @include maxw(767px) {
+        height: 24px;
+        padding: 0 32px;
+        margin-bottom: 13px;
+        background-color: #e2eaed;
+        font-size: 12px;
+      }
+
       &-icon {
         position: absolute;
         padding: 9px 15px;
@@ -32,23 +57,37 @@
         background-color: #feaa25;
         border-radius: 50px;
         color: white;
+        @include maxw(767px) {
+          padding: 6px 9px;
+        }
       }
+
       p {
         padding: 5px 0;
         line-height: lineH(28px, 18px);
       }
     }
+
     &-heading {
-        font-size: 60px;
-        line-height: lineH(75px,60px);
-        width: 55%;
-        margin-bottom: 32px;
+      font-size: 32px;
+      line-height: lineH(75px, 60px);
+      width: 55%;
+      margin-bottom: 32px;
+      @include maxw(767px) {
+        width: 100%;
+      }
     }
+
     &-desc {
-        width: 50%;
-        font-size: 18px;
-        line-height: lineH(28px,18px);
-        margin-bottom: 45px;
+      width: 50%;
+      font-size: 18px;
+      line-height: lineH(28px, 18px);
+      margin-bottom: 45px;
+      @include maxw(767px) {
+        font-size: 14px;
+        line-height: 1;
+        width: 90%;
+      }
     }
   }
 }
