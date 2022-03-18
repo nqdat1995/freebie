@@ -1,0 +1,56 @@
+.code {
+  margin-bottom: 210px;
+
+  &-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 110px;
+  }
+
+  &-content {
+    padding-right: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-heading {
+      margin-bottom: 40px;
+    }
+
+    &-desc {
+      margin-bottom: 46px;
+    }
+  }
+
+  @include maxw(1023px) {
+    margin-bottom: 110px;
+
+    &-main {
+      gap: 0 50px;
+    }
+
+    &-content {
+      padding-right: 20px;
+
+      &-heading {
+        margin-bottom: 20px;
+      }
+
+      &-desc {
+        margin-bottom: 26px;
+      }
+    }
+  }
+
+  @include maxw(767px) {
+    &-main {
+      grid-template-columns: 1fr;
+      gap: 20px 0;
+    }
+
+    &-content {
+      padding-right: 0;
+      align-items: center;
+    }
+  }
+}

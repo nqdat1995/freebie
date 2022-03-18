@@ -436,4 +436,52 @@ body {
   }
 }
 
+.code {
+  margin-bottom: 210px;
+}
+.code-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 110px;
+}
+.code-content {
+  padding-right: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.code-content-heading {
+  margin-bottom: 40px;
+}
+.code-content-desc {
+  margin-bottom: 46px;
+}
+@media screen and (max-width: 1023px) {
+  .code {
+    margin-bottom: 110px;
+  }
+  .code-main {
+    gap: 0 50px;
+  }
+  .code-content {
+    padding-right: 20px;
+  }
+  .code-content-heading {
+    margin-bottom: 20px;
+  }
+  .code-content-desc {
+    margin-bottom: 26px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .code-main {
+    grid-template-columns: 1fr;
+    gap: 20px 0;
+  }
+  .code-content {
+    padding-right: 0;
+    align-items: center;
+  }
+}
+
 /*# sourceMappingURL=app.css.map */
