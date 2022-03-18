@@ -1,0 +1,91 @@
+.jackpot {
+    margin-bottom: 120px;
+
+    &-main {
+        padding: 0 54px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 125px;
+    }
+
+    &-heading {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 0 70px;
+
+        &-title {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        &-text {
+            padding: 0 48px;
+            grid-column-start: 4;
+            grid-column-end: 8;
+            border-left: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8%;
+    }
+
+    @include maxw(1023px) {
+        margin-bottom: 50px;
+    
+        &-main {
+            gap: 50px;
+            padding: 0 20px;
+        }
+
+        &-heading {
+            gap: 20px;
+    
+            &-text {
+                padding: 0 48px;
+            }
+        }
+
+        &-items {
+            gap: 0 50px;
+        }
+    }
+
+    @include maxw(767px) {
+        margin-bottom: 50px;
+    
+        &-main {
+            gap: 20px;
+            padding: 0;
+        }
+
+        &-heading {
+            grid-template-columns: 1fr;
+            &-title, &-text {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            &-text {
+                padding: 0;
+                border: 0;
+            }
+        }
+
+        &-items {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            text-align: center;
+        }
+
+        &-image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

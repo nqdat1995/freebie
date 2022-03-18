@@ -99,6 +99,15 @@ body {
   font-size: 20px;
   line-height: 2.9;
 }
+.title-sub-red {
+  color: #f55767;
+}
+.title-sub-green {
+  color: #40975f;
+}
+.title-sub-blue {
+  color: #2563ff;
+}
 @media screen and (max-width: 1023px) {
   .title-main {
     font-size: 24px;
@@ -343,6 +352,87 @@ body {
   }
   .feature-main {
     grid-template-columns: 1fr;
+  }
+}
+
+.jackpot {
+  margin-bottom: 120px;
+}
+.jackpot-main {
+  padding: 0 54px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 125px;
+}
+.jackpot-heading {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0 70px;
+}
+.jackpot-heading-title {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.jackpot-heading-text {
+  padding: 0 48px;
+  grid-column-start: 4;
+  grid-column-end: 8;
+  border-left: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jackpot-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8%;
+}
+@media screen and (max-width: 1023px) {
+  .jackpot {
+    margin-bottom: 50px;
+  }
+  .jackpot-main {
+    gap: 50px;
+    padding: 0 20px;
+  }
+  .jackpot-heading {
+    gap: 20px;
+  }
+  .jackpot-heading-text {
+    padding: 0 48px;
+  }
+  .jackpot-items {
+    gap: 0 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .jackpot {
+    margin-bottom: 50px;
+  }
+  .jackpot-main {
+    gap: 20px;
+    padding: 0;
+  }
+  .jackpot-heading {
+    grid-template-columns: 1fr;
+  }
+  .jackpot-heading-title, .jackpot-heading-text {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .jackpot-heading-text {
+    padding: 0;
+    border: 0;
+  }
+  .jackpot-items {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  .jackpot-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

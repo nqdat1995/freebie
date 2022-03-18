@@ -44,7 +44,7 @@ body {
   font-size: 16px;
   line-height: lineH(26px, 16px);
   text-align: justify;
-  
+
   @include maxw(1023px) {
     font-size: 12px;
     line-height: lineH(26px, 16px);
@@ -64,6 +64,18 @@ body {
   &-sub {
     font-size: 20px;
     line-height: lineH(58px, 20px);
+
+    &-red {
+      color: $red;
+    }
+
+    &-green {
+      color: $green;
+    }
+
+    &-blue {
+      color: $blue-light;
+    }
   }
 
   @include maxw(1023px) {
@@ -79,5 +91,4 @@ body {
 
   @include maxw(767px) {
   }
-  
 }
