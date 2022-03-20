@@ -567,9 +567,6 @@ body {
   gap: 45px 65px;
   margin-bottom: 60px;
 }
-.sfeature-right-image {
-  position: relative;
-}
 .sfeature-right-image img {
   padding: 32px 0;
   position: relative;
@@ -596,7 +593,6 @@ body {
     align-items: center;
   }
   .sfeature-right-image img {
-    position: relative;
     max-width: 80%;
   }
 }
@@ -711,6 +707,183 @@ body {
 @media screen and (max-width: 767px) {
   .pricing-detail {
     grid-template-columns: 1fr;
+  }
+}
+
+.client {
+  margin-bottom: 180px;
+  position: relative;
+}
+.client-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.client-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.client-image img {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+.client-content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.client-title {
+  margin-bottom: 40px;
+}
+.client-desc {
+  margin-bottom: 45px;
+}
+.client-rate {
+  margin-bottom: 12px;
+}
+.client-comment-title {
+  margin-bottom: 36px;
+}
+.client-comment-desc {
+  margin-bottom: 65px;
+}
+.client-comment-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.client-comment-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.client-comment-buttons span {
+  height: 25px;
+  border-left: 2px solid #ebebeb;
+}
+.client-comment-button {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #ebebeb;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.client-comment-button-active {
+  background: #ebebeb;
+}
+.client-author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.client-author-detail {
+  padding: 0 30px;
+}
+.client-author-name {
+  font-size: 18px;
+  color: #242f51;
+  margin-bottom: 18px;
+}
+@media screen and (max-width: 1023px) {
+  .client {
+    margin-bottom: 90px;
+  }
+  .client-main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .client-image {
+    padding-bottom: 50px;
+  }
+  .client-image img {
+    position: relative;
+  }
+}
+@media screen and (max-width: 767px) {
+  .client-comment-author {
+    flex-direction: column;
+    gap: 20px 0;
+  }
+}
+
+.question {
+  margin-bottom: 110px;
+}
+.question-main {
+  padding: 0 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.question-heading {
+  margin-bottom: 66px;
+}
+.question-title, .question-desc {
+  text-align: center;
+}
+.question-title {
+  margin-bottom: 44px;
+}
+.question-desc {
+  padding: 0 158px;
+}
+.question-ask {
+  padding: 26px 45px;
+}
+.question-ask-title {
+  margin-bottom: 24px;
+}
+.question-ask-desc {
+  margin-bottom: 24px;
+}
+.question-items {
+  width: 100%;
+}
+.question-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+}
+.question-item-common {
+  background: #f5f7fa;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.question-item-add {
+  cursor: pointer;
+}
+@media screen and (max-width: 1023px) {
+  .question {
+    margin-bottom: 60px;
+  }
+  .question-main {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .question-desc {
+    padding: 0;
+  }
+  .question-ask {
+    padding: 12px 20px;
+  }
+  .question-item {
+    padding: 0 24px;
+  }
+  .question-item-ask {
+    font-size: 14px;
   }
 }
 
