@@ -71,6 +71,8 @@
   }
 
   @include maxw(767px) {
+    margin-bottom: 0;
+
     &-desc {
       padding: 0;
     }

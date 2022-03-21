@@ -1,0 +1,84 @@
+.footer {
+  background-color: $blue-dark;
+
+  &-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 110px 0;
+  }
+
+  &-logo {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    color: $orange;
+    line-height: lineH(44px, 30px);
+    margin-bottom: 52px;
+
+    &-lab {
+      color: white;
+    }
+  }
+
+  &-link {
+    margin-bottom: 32px;
+
+    ul {
+      display: inline-flex;
+      gap: 0 40px;
+      li {
+        list-style: none;
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  &-social {
+    margin-bottom: 90px;
+
+    ul {
+      display: inline-flex;
+      gap: 0 20px;
+      li {
+        list-style: none;
+
+        a {
+          color: #404f6e;
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  &-copy {
+    color: #404f6e;
+  }
+
+  @include maxw(767px) {
+    &-main {
+      padding: 70px 0;
+    }
+
+    &-link {
+      margin-bottom: 32px;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+      }
+    }
+
+    &-social {
+      margin-bottom: 50px;
+    }
+  }
+}

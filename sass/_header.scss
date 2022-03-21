@@ -52,6 +52,14 @@
     }
   }
 
+  .nav {
+    &-link {
+      &-toggle {
+        display: none;
+      }
+    }
+  }
+
   @include maxw(1023px) {
     ul {
       gap: 0 10px;
@@ -59,8 +67,14 @@
   }
 
   @include maxw(767px) {
-    ul {
-      display: none;
+    .nav {
+      &-link {
+        display: none;
+
+        &-toggle {
+          display: initial;
+        }
+      }
     }
   }
 }
