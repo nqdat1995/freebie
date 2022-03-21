@@ -1061,6 +1061,12 @@ section[id] {
 }
 .menu-toggle {
   padding: 5px;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .menu-toggle {
+    display: initial;
+  }
 }
 .menu-close {
   cursor: pointer;

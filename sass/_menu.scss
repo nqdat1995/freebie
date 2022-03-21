@@ -35,6 +35,11 @@
   }
   &-toggle {
     padding: 5px;
+    display: none;
+
+    @include maxw(767px) {
+      display: initial;
+    }
   }
   &-close {
     cursor: pointer;
